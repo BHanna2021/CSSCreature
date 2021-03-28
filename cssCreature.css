@@ -1,0 +1,415 @@
+/*
+Need to use z-index to have layer effect - will need to always have position:relative in order to use z-index. or position:absolute/fixed
+Order:
+1) Hair(circle/oval, bigger than face), shirt(square with two rectangle arms)
+2) Face skin (circle/oval, slightly smaller than hair), ears(half-circles?), shoes (circles/flat on bottom??), gloves (two circles attached to arms)
+3) eyebrows (crescents??), whites of eyes (oval), overalls (square with two rectangles for legs)
+4) brim of hat(like the mouth from smily), blues of eyes (ovals), white circle on hat (circle with flat bottom??), mustache (upward curve), straps for overalls (rectangles that end in curves)
+5) black pupils (ovals), buttons for overalls(circles)
+6) white dot on pupil of eyes(circles), nose(circle, slightly obscuring eyes)
+
+Different sections/divs:
+hat/head?
+arms
+trunk
+legs
+
+classes:
+skin
+hat
+
+ids:
+lefthand
+righthand
+leftfoot
+rightfoot
+*/
+body{
+    background-image: url("https://th.bing.com/th/id/Ra03ca83a3b72820720ce489a91e3b57d?rik=0%2bP%2fhWCJSPjz%2bw&riu=http%3a%2f%2fwallpapercave.com%2fwp%2fgNdkv9W.jpg&ehk=9PHAonCOdmVudaZtXFnsi%2fPnwnKPNe%2b4FV6hezwOuwY%3d&risl=&pid=ImgRaw");
+}
+
+.marioHair{
+    border: solid 1px rgb(105, 60, 27);
+    background-color: rgb(105, 60, 27);
+}
+
+.marioSkin{
+    background-color: navajowhite;
+    border: solid 1px navajowhite;
+}
+
+#marioHair{
+    width:150px;
+    height:180px;
+    border-radius: 70px 70px 60px 60px;
+    position:relative;
+    top: 42px;
+    left: 350px;
+    z-index: 1;
+}
+
+#marioLeftEar{
+    width:25px;
+    height:30px;
+    border-radius: 25px;
+    position: relative;
+    top:190px;
+    left:330px;
+    z-index: 0;
+}
+
+#marioRightEar{
+    width: 25px;
+    height:30px;
+    border-radius:25px;
+    position:relative;
+    top:160px;
+    left:495px;
+    z-index: 0;
+}
+
+#marioFace{
+    width:140px;
+    height:175px;
+    border-radius:110px;
+    position:relative;
+    top: 9px;
+    left: 4px;
+    z-index: 2;
+}
+
+.marioShirt{
+    border: solid 1px red;
+    background-color:red;
+}
+
+#marioShirtBody{
+    width:150px;
+    height:150px;
+    position:relative;
+    top:40px;
+    left:349px;
+    z-index: 1.5;
+}
+
+#marioLeftArm{
+    width:70px;
+    height:60px;
+    transform: skewY(130deg);
+    position:relative;
+    top:-70px;
+    left:279px;
+    z-index: 2;
+}
+
+#marioRightArm{
+    width:70px;
+    height:60px;
+    transform:skewY(50deg);
+    position: relative;
+    top: -130px;
+    left:500px;
+    z-index: 2;
+}
+
+.marioShoes{
+    border: solid 1px saddlebrown;
+    background-color: saddlebrown;
+}
+
+#marioLeftShoe{
+    width:70px;
+    height:50px;
+    border-radius: 45px 45px 15px 15px;
+    position:relative;
+    top: -373px;
+    left: 344px;
+    z-index: 1;
+}
+
+#marioRightShoe{
+    width:70px;
+    height:50px;
+    border-radius: 45px 45px 15px 15px;
+    position: relative;
+    top: -425px;
+    left: 434px;
+    z-index: 1;
+}
+
+.marioHat{
+    border: solid 1px red;
+    background-color: red;
+}
+
+#marioHat{
+    width:140px;
+    height:70px;
+    border-radius: 100px 100px 50px 50px;
+    position: relative;
+    top: 148px;
+    left: 355px;
+    z-index: 3;
+}
+
+.marioWhite{
+    border: solid 1px white;
+    background-color: white;
+}
+
+#marioLeftGlove{
+    width:50px;
+    height:60px;
+    border-radius: 30px 50px 30px 50px;
+    position: relative;
+    top:-151px;
+    left:246px;
+    z-index: 3;
+}
+
+#marioRightGlove{
+    width:50px;
+    height:60px;
+    border-radius: 50px 30px 50px 30px;
+    position:relative;
+    top:-211px;
+    left: 549px;
+    z-index: 3;
+}
+
+#marioLeftEyebrow{
+    width:35px;
+    height:5px;
+    transform:skewY(5deg);
+    position:relative;
+    top:-115px;
+    left:32px;
+    z-index: 4;
+}
+
+#marioRightEyebrow{
+    width:35px;
+    height:5px;
+    transform:skewY(175deg);
+    position: relative;
+    top:-122px;
+    left: 83px;
+    z-index: 4;
+}
+
+#marioLeftEye{
+    width:20px;
+    height:40px;
+    border-radius: 40px;
+    position:relative;
+    top:-118px;
+    left:40px;
+    z-index: 4;
+}
+
+#marioRightEye{
+    width:20px;
+    height:40px;
+    border-radius: 40px;
+    position:relative;
+    top:-160px;
+    left:85px;
+    z-index: 4;
+}
+
+.marioOveralls{
+    border: solid 1px blue;
+    background-color: blue;
+}
+
+#marioOverallBody{
+    width:150px;
+    height:110px;
+    position:relative;
+    top:-285px;
+    left:349px;
+    z-index: 4;
+}
+
+#marioLeftLeg{
+    width:60px;
+    height:70px;
+    position:relative;
+    top: -285px;
+    left: 349px;
+    z-index: 3;
+}
+
+#marioRightLeg{
+    width:60px;
+    height:70px;
+    position:relative;
+    top: -358px;
+    left: 439px;
+    z-index: 3;
+}
+
+#marioHatCircle{
+    width:50px;
+    height:50px;
+    border-radius: 50px;
+    position:relative;
+    top: 10px;
+    left: 45px;
+    z-index: 5;
+}
+
+#marioHatLogo{
+    width:70px;
+    height:65px;
+    position:relative;
+    top:-45px;
+    left:36px;
+    z-index: 6;
+}
+
+#marioHatBrim{
+    width:110px;
+    height:30px;
+    border-radius: 0px 0px 45px 45px;
+    position:relative;
+    top:-55px;
+    left:15px;
+    z-index: 6;
+}
+
+.marioIris{
+    border: solid 1px mediumaquamarine;
+    background-color: mediumaquamarine;
+}
+
+#marioLeftIris{
+    width:15px;
+    height:30px;
+    border-radius: 40px;
+    position:relative;
+    top:7px;
+    left:3px;
+    z-index: 6;
+}
+
+#marioRightIris{
+    width:15px;
+    height:30px;
+    border-radius: 40px;
+    position:relative;
+    top:7px;
+    left:3px;
+    z-index: 6;
+}
+
+.marioPupil{
+    border: solid 1px black;
+    background-color: black;
+}
+
+#marioLeftPupil{
+    width:8px;
+    height:18px;
+    border-radius: 20px;
+    position:relative;
+    top:6px;
+    left:4px;
+    z-index: 7;
+}
+
+#marioRightPupil{
+    width:8px;
+    height:18px;
+    border-radius: 20px;
+    position:relative;
+    top:6px;
+    left:4px;
+    z-index: 7;
+}
+
+#marioLeftLight{
+    width:4px;
+    height:5px;
+    border-radius: 4px;
+    position:relative;
+    top:2px;
+    left:2px;
+    z-index: 8;
+}
+
+#marioRightLight{
+    width:4px;
+    height:5px;
+    border-radius: 4px;
+    position:relative;
+    top:2px;
+    left:2px;
+    z-index: 8;
+}
+
+#marioMustache{
+    width:100px;
+    height:25px;
+    border-radius: 0px 0px 45px 45px;
+    position:relative;
+    top:-182px;
+    left:25px;
+    z-index: 9;
+}
+
+#marioNose{
+    width:40px;
+    height:40px;
+    border: solid .5px papayawhip;
+    background-color: navajowhite;
+    border-radius: 45px;
+    position:relative;
+    top:-162px;
+    left:54px;
+    z-index: 10;
+}
+
+#marioLeftStrap{
+    width:22px;
+    height:100px;
+    border: solid .2px rgb(24, 108, 160);
+    transform:skewX(10deg);
+    position:relative;
+    top:-2px;
+    left:15px;
+    z-index: 10;
+}
+
+#marioRightStrap{
+    width:22px;
+    height:100px;
+    border: solid .2px rgb(24, 108, 160);
+    transform:skewX(170deg);
+    position:relative;
+    top:-119px;
+    left:112px;
+    z-index: 10;
+}
+
+.marioButtons{
+    width:13px;
+    height:13px;
+    border-radius: 13px;
+    border: solid 1px goldenrod;
+    background-color: yellow;
+}
+
+#marioLeftButton{
+    position:relative;
+    top:-22px;
+    left:26px;
+    z-index: 11;
+}
+
+#marioRightButton{
+    position:relative;
+    top:-139px;
+    left:110px;
+    z-index: 11;
+}
